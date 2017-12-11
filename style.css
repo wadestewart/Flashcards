@@ -8,11 +8,14 @@
     .header {
         width: 100%;
         height: 100%;
+        font-size: 24px;
         font-family: 'Satisfy', cursive;
+        text-shadow: 2px 2px 2px rgb(97, 67, 67);
         text-align: center;
         flex: 0 0 auto;
         background: #18D8F0cc;
         color: #ED145A;
+        border: 1px solid black;
     }
 
         .hg-body {
@@ -21,10 +24,16 @@
         }
 
             .content {
-                font-family: 'Satisfy', cursive;                
+                font-family: 'Quattrocento', serif;
                 flex: 1 1 auto;
                 background: #18D8F0aa;
                 text-align: center;
+            }
+
+            .card {
+                font-size: 36px;
+                font-family: 'Quattrocento', serif;       
+                text-align: center;         
             }
 
                 .card {
@@ -40,37 +49,34 @@
                 #begin {
                     height: 35px;
                     width: 70px;
+                    font-family: 'Quattrocento', serif;                                    
                     position: absolute;
                     right: 0;
                     bottom: 0;
                 }
 
-                /* #correct {
-                    
-                }
-
-                #incorrect {
-
-                } */
-
             .nav {
-                width: 100px;
-                list-style: none;
-                text-align: left;
+                width: 200px;
                 order: -1;
                 background: #F090C0;
-                margin: 0;
+                border: 1px solid black;                
             }
 
             .aside {
                 width: 200px;
                 background: #F090C0;
+                border: 1px solid black;                
+            }
+
+            h3 {
+                font-family: 'Quattrocento', serif;                
             }
 
     .footer {
         width: 100%;
         height: 50px;
         background: #18D8F0ff;
+        border: 1px solid black;        
     }
 
     @media(max-width: 700px) {

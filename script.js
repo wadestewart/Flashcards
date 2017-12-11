@@ -5,27 +5,30 @@
 // User pushes button on keyboard (or on screen(?))to flip card and reveal answer (definition)
 // User checks box (pushes button(?)) to mark correct or incorrect
 // As cards are marked correct they are taken out of rotation
-// Game is over once user has marked all cards correct
+// Session is over once user has marked all cards correct
 
 // Bonus: track scores even if page is reloaded
 // Bonus: Images on cards
 // Bonus: user adds thier own cards
 
-const begin = $('#begin')
-begin.on('click', beginGame)
+let begin = $('#begin')
+begin.on('click', playGame)
 
-function beginGame() {
+function playGame() {
     console.log('clicked')
 }
 
-const correct = $('#correct')
-correct.on('click', tallyCorrect)
+let correct = $('#buttonC')
+let tallyC = $('#')
+correct.on('click', () => {
 
-function tallyCorrect() {
-    console.log('clicked')
 }
 
-const incorrect = $('#incorrect')
+// function tallyCorrect() {
+//     console.log('clicked')
+// }
+
+let incorrect = $('#buttonI')
 incorrect.on('click', tallyIncorrect)
 
 function tallyIncorrect() {
