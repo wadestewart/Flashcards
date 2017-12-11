@@ -21,10 +21,37 @@
         }
 
             .content {
+                font-family: 'Satisfy', cursive;                
                 flex: 1 1 auto;
                 background: #18D8F0aa;
                 text-align: center;
             }
+
+                .card {
+                    height: 300px;
+                    width: 700px;
+                    border: 2px solid #ED145A;
+                    margin: auto;
+                    background: #F090C0;
+                    box-shadow: 4px 4px 4px rgb(97, 67, 67);
+                    position: relative;
+                }
+
+                #begin {
+                    height: 35px;
+                    width: 70px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                /* #correct {
+                    
+                }
+
+                #incorrect {
+
+                } */
 
             .nav {
                 width: 100px;
@@ -36,7 +63,7 @@
             }
 
             .aside {
-                width: 100px;
+                width: 200px;
                 background: #F090C0;
             }
 
