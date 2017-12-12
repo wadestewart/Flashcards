@@ -11,11 +11,50 @@
 // Bonus: Images on cards
 // Bonus: user adds thier own cards
 
+
+
+const gameCards = [
+    {
+        Question: "Alexandra 'Alex' Owens",
+        Answer: 'A steel town welder with a dream of becoming a professional dancer. *sidenote: she works as an exotic dancer.'
+    },
+
+    {
+        Question: 'Nick Hurley',
+        Answer: 'Owner of the steel mill where ALex works, he falls for her after seeing her dance exotically. *sidenote: he would later resign for the obvious sexual harrasment.'
+    },
+
+    {
+        Question: "Mawby's",
+        Answer: "'Gentleman' Club where ALex and her friends work. Many have aspirations beyond dancing exotically."
+    },
+
+    {
+        Question: 'Maniac',
+        Answer: "Title track from the movie. 'Best song ever written' -Mozart"
+    },
+
+    {
+        Question: 'Pittsburgh Conservatory of Dance and Repertory',
+        Answer: 'Where ALex eventually gets an audition and her dreams come true!'
+    }
+]
+
+// const eachCard = []
+// add counter
+// you want this loop be driven user guess rather than a for loop
+// for (let i = 0; i > gameCards.length; i++) {
+//     let 
+// }
+
 let begin = $('#begin')
+let cardFront = $('.front')
+
 begin.on('click', playGame)
 
 function playGame() {
-    console.log('clicked')
+    let cardPop = gameCards[0].Question
+    cardFront.text(cardPop)
 }
 
 let tally = 0
@@ -40,32 +79,3 @@ incorrect.on('click', () => {
         $('.incorrect').text(tallyIncorrect)
     }
 })
-
-const gameCards = [
-    {
-        cardOne: {
-            Question: "Alexandra 'Alex' Owens",
-            Answer: 'A steel town welder with a dream of becoming a professional dancer. *sidenote: she works as an exotic dancer.'
-        },
-
-        cardTwo: {
-            Question: 'Nick Hurley',
-            Answer: 'Owner of the steel mill where ALex works, he falls for her after seeing her dance exotically. *sidenote: he would later resign for the obvious sexual harrasment.'
-        },
-
-        cardThree: {
-            Question: "Mawby's",
-            Answer: "'Gentleman' Club where ALex and her friends work. Many have aspirations beyond dancing exotically."
-        },
-
-        cardFour: {
-            Question: 'Maniac',
-            Answer: "Title track from the movie. 'Best song ever written' -Mozart"
-        },
-
-        cardFive: {
-            Question: 'Pittsburgh Conservatory of Dance and Repertory',
-            Answer: 'Where ALex eventually gets an audition and her dreams come true!'
-        }
-    }
-]

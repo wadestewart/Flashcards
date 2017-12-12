@@ -35,35 +35,56 @@
                 vertical-align: super;
             }
 
-                .card {
-                    height: 300px;
+                /* This 3D flip from https://desandro.github.io/3dtransforms/docs/card-flip.html*/
+                .container {
                     width: 700px;
-                    border: 2px solid #ED145A;
-                    margin: auto;
-                    background-image: url('images/flashdance.png');
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    box-shadow: 10px 10px 10px rgb(97, 67, 67);
+                    height: 300px;
                     position: relative;
+                    perspective: 800px;
+                    text-align: center;
                 }
-
-                    .card-content {
-                        font-size: 48px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        text-align: center;         
-                    }
-
-                    #begin {
-                        height: 50px;
-                        width: 100px;
-                        font-size: 24px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        background: #F090C0;
-                        border: 1px solid black;                        
+                
+                    #card {
+                        height: 100%;
+                        width: 100%;
+                        border: 2px solid #ED145A;
+                        margin: auto;
+                        box-shadow: 10px 10px 10px rgb(97, 67, 67);
                         position: absolute;
-                        right: 10px;
-                        bottom: 10px;
+                        left: 135px;
+                        transform-style: preserve-3d;
+                        transition: transform 1s;
                     }
+
+                    #card figure {
+                        margin: 0;
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                      }
+
+                        .front {
+                            font-size: 48px;
+                            font-family: 'Josefin Sans', sans-serif;
+                            background-image: url( 'images/flashdance.png' );
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            text-align: center;         
+                        }
+
+                        .back {
+                            font-size: 48px;
+                            font-family: 'Josefin Sans', sans-serif;
+                            background: #F090C0;
+                            text-align: center; 
+                            transform: rotateY( 180deg );                            
+                        }
+
+                        #card.flipped {
+                            transform: rotateY( 180deg );                            
+                        }
 
                 #buttonC {
                     height: 50px;
@@ -75,6 +96,19 @@
                     position: absolute;
                     bottom: 100px;
                     left: 100px;
+                }
+
+                #begin {
+                    height: 75px;
+                    width: 150px;
+                    font-size: 32px;
+                    font-family: 'Josefin Sans', sans-serif;
+                    background: #F090C0;
+                    border: 1px solid black;                        
+                    position: absolute;
+                    bottom: 75px;
+                    left: 425px;
+                    
                 }
 
                 #buttonI {
@@ -96,10 +130,20 @@
                 border: 1px solid black;                
             }
 
+            .correct {
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 48px;
+            }
+
             .aside {
                 width: 200px;
                 background: #F090C0;
                 border: 1px solid black;                
+            }
+
+            .incorrect {
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 48px;
             }
 
             h3 {
