@@ -18,19 +18,25 @@ function playGame() {
     console.log('clicked')
 }
 
+let tally = 0
 let correct = $('#buttonC')
-let tallyC = $('#')
+let tallyCorrect = parseInt($('.correct').text())
+
 correct.on('click', () => {
+    tallyCorrect += 1
 
-}
-
-// function tallyCorrect() {
-//     console.log('clicked')
-// }
+    if (tallyCorrect <= 5) {
+        $('.correct').text(tallyCorrect)
+    }
+})
 
 let incorrect = $('#buttonI')
-incorrect.on('click', tallyIncorrect)
+let tallyIncorrect = parseInt($('.incorrect').text())
 
-function tallyIncorrect() {
-    console.log('clicked')
-}
+incorrect.on('click', () => {
+    tallyIncorrect += 1
+
+    if (tallyIncorrect <= 5) {
+        $('.incorrect').text(tallyIncorrect)
+    }
+})
