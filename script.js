@@ -47,17 +47,29 @@ const gameCards = [
 //     let 
 // }
 
+// let counter = 0
 let begin = $('#begin')
 let cardFront = $('.front')
+let cardBack = $('.back')
 
-begin.on('click', playGame)
+begin.on('click', firstCardQ)
 
-function playGame() {
-    let cardPop = gameCards[0].Question
-    cardFront.text(cardPop)
+function firstCardQ() {
+    let cardPop1Q = gameCards[0].Question
+    cardFront.text(cardPop1Q).css({'background': '#F090C0'})
+    begin.html('Flip')
+    begin.click(function() {
+        $('#card').toggleClass('flipped')
+    })
 }
 
-let tally = 0
+begin.on('click', firstCardA)
+
+function firstCardA() {
+    let cardPop1A = gameCards[0].Answer
+    cardBack.text(cardPop1A)
+}
+
 let correct = $('#buttonC')
 let tallyCorrect = parseInt($('.correct').text())
 
