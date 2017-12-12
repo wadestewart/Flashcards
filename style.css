@@ -24,7 +24,7 @@
         }
 
             .content {
-                font-family: 'Quattrocento', serif;
+                font-family: 'Josefin Sans', sans-serif;
                 flex: 1 1 auto;
                 background: #18D8F0aa;
                 text-align: center;
@@ -47,7 +47,7 @@
 
                     .card-content {
                         font-size: 48px;
-                        font-family: 'Quattrocento', serif;       
+                        font-family: 'Josefin Sans', sans-serif;
                         text-align: center;         
                     }
 
@@ -55,7 +55,7 @@
                         height: 35px;
                         width: 70px;
                         font-size: 15px;
-                        font-family: 'Quattrocento', serif;
+                        font-family: 'Josefin Sans', sans-serif;
                         border: 1px solid black;                        
                         position: absolute;
                         right: 10px;
@@ -66,7 +66,7 @@
                     height: 50px;
                     width: 100px;
                     font-size: 20px;
-                    font-family: 'Quattrocento', serif;
+                    font-family: 'Josefin Sans', sans-serif;
                     border: 1px solid black;
                     position: absolute;
                     bottom: 125px;
@@ -77,7 +77,7 @@
                     height: 50px;
                     width: 100px;
                     font-size: 20px;
-                    font-family: 'Quattrocento', serif;
+                    font-family: 'Josefin Sans', sans-serif;
                     border: 1px solid black;                    
                     position: absolute;
                     bottom: 125px;
@@ -98,7 +98,7 @@
             }
 
             h3 {
-                font-family: 'Quattrocento', serif;                
+                font-family: 'Josefin Sans', sans-serif;
             }
 
     .footer {
