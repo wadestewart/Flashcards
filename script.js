@@ -12,7 +12,7 @@
 // Bonus: user adds thier own cards
 
 
-
+// Array containing data for flash cards
 const gameCards = [
     {
         Question: "Alexandra 'Alex' Owens",
@@ -48,26 +48,37 @@ const gameCards = [
 // }
 
 // let counter = 0
+// Game opening screen, click Begin to start study session!
+// Begin button, front/back of card targeted
 let begin = $('#begin')
 let cardFront = $('.front')
 let cardBack = $('.back')
 
 begin.on('click', firstCardQ)
 
+// Function to populate 1st card question, change background, change 'Begin' button to 'Flip', and flip card when ready
 function firstCardQ() {
     let cardPop1Q = gameCards[0].Question
-    cardFront.text(cardPop1Q).css({'background': '#F090C0'})
+    cardFront.text(cardPop1Q).css({'backgroundImage': 'url(images/alex.jpg)'})
     begin.html('Flip')
     begin.click(function() {
         $('#card').toggleClass('flipped')
     })
 }
-
+// Function to populate 1st card answer
 begin.on('click', firstCardA)
 
 function firstCardA() {
     let cardPop1A = gameCards[0].Answer
     cardBack.text(cardPop1A)
+}
+
+let next = $('#next')
+
+next.on('click', nextCard)
+
+function nextCard () {
+    
 }
 
 let correct = $('#buttonC')
