@@ -14,17 +14,17 @@ const gameCards = [
 
     {
         Question: "Mawby's",
-        Answer: "'Gentleman' Club where ALex and her friends work. Many have aspirations beyond dancing exotically."
+        Answer: "'Gentleman' Club where Aex and her friends work. Many have aspirations beyond dancing exotically."
+    },
+
+    {
+        Question: 'Pittsburgh Conservatory of Dance and Repertory',
+        Answer: 'Where Alex eventually gets an audition and her dreams come true!'
     },
 
     {
         Question: 'Maniac',
         Answer: "Title track from the movie. 'Best song ever written' -Mozart"
-    },
-
-    {
-        Question: 'Pittsburgh Conservatory of Dance and Repertory',
-        Answer: 'Where ALex eventually gets an audition and her dreams come true!'
     }
 ]
 
@@ -41,14 +41,13 @@ begin.on('click', function() {
     cardQuestion(counter)
 })
 
-// Function to populate 1st card question, change background, change 'Begin' button to 'Flip', and flip card when ready
+// Function to populate card questions, change background, change 'Begin' button to 'Flip', and flip card when ready
 function cardQuestion(counter) {
-    let populateQ = gameCards[counter].Question// Add counter here
+    let populateQ = gameCards[counter].Question
     cardFront.text( populateQ ).css({ 'backgroundImage': 'url(images/alex.jpg)' }).css( 'color', 'white' )
     flip.click(function () {
         card.toggleClass( 'flipped' )
     })
-    // begin.off( 'click', firstCardQ)
 }
 
 // Function to populate 1st card answer
@@ -68,9 +67,15 @@ function cardAnswer(counter) {
 let next = $('#next')
 
 next.on('click', function() {
-    counter++  
+    counter++ 
+    if (counter === 5) {
+        counter = 0
+    }
     cardQuestion(counter)
-    cardFront.text( populateQ ).css({'backgroundImage': 'url(images/nick.jpg)'}).css( 'text-align', 'left' )
+    cardFront.text( populateQ ).css({ 'backgroundImage': 'url(images/nick.jpg)'}).css( 'text-align', 'left' )
+    cardFront.text( populateQ )//.css({ 'backgroundImage': 'url(images/mawbys.jpg'})
+    cardFront.text( populateQ )//.css({ 'backgroundImage': 'url(images/pcdr.png'})
+    cardFront.text( populateQ )//.css({ 'backgroundImage': 'url(images/maniac.png'})
 })
 
 // Tally correct and incorrect cards
