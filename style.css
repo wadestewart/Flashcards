@@ -71,7 +71,7 @@
                         .front {
                             height: 300px;
                             width: 700px;
-                            font-size: 48px;
+                            font-size: 24px;
                             font-family: 'Josefin Sans', sans-serif;
                             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
                             background-image: url( 'images/flashdance.png' );
@@ -85,7 +85,7 @@
                         .back {
                             height: 300px;
                             width: 700px;
-                            font-size: 48px;
+                            font-size: 24px;
                             font-family: 'Josefin Sans', sans-serif;
                             background: #F090C0;
                             margin: 0;
