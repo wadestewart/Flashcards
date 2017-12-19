@@ -1,3 +1,5 @@
+/* Awesome that you're thinking about cross-platform compatibility using media queries!*/
+
 .hg {
     display: flex;    
     min-height: 100vh;

@@ -1,3 +1,5 @@
+// Looks good! I would add an imageUrl key to your game cards to store the correct image for each question. That way when in your question function starting on line 47, you can use gameCards[counter].imageUrl to insert the correct background image.
+// To remove correct guesses from the que I would add a line gameCards.splice(counter, 1) to your correct button click event. That will remove 1 item at the index of the counter.
 
 // Array containing data for flash cards
 let counter = 0
