@@ -20,15 +20,20 @@
 
         .hg-body {
             display: flex;
+            justify-content: center;
+            align-content: center;
             flex: 1 0 auto;
         }
 
             .content {
                 font-family: 'Josefin Sans', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
                 flex: 1 1 auto;
                 background: #18D8F0aa;
                 text-align: center;
-                position: relative;
             }
 
             .sup {
@@ -106,9 +111,9 @@
                     font-family: 'Josefin Sans', sans-serif;
                     background: #F090C0;                    
                     border: 1px solid black;
-                    position: absolute;
+                    /* position: absolute;
                     bottom: 100px;
-                    left: 100px;
+                    left: 100px; */
                 }
 
                 #begin {
@@ -118,9 +123,9 @@
                     font-family: 'Josefin Sans', sans-serif;
                     background: #F090C0;
                     border: 1px solid black;                        
-                    position: absolute;
+                    /* position: absolute;
                     bottom: 75px;
-                    left: 250px;   
+                    left: 250px;    */
                 }
 
                 #flip {
@@ -130,9 +135,9 @@
                     font-family: 'Josefin Sans', sans-serif;
                     background: #F090C0;                    
                     border: 1px solid black;                    
-                    position: absolute;
+                    /* position: absolute;
                     bottom: 75px;
-                    left: 414px;
+                    left: 414px; */
                 }
 
                 #next {
@@ -142,9 +147,9 @@
                     font-family: 'Josefin Sans', sans-serif;
                     background: #F090C0;                    
                     border: 1px solid black;                    
-                    position: absolute;
+                    /* position: absolute;
                     bottom: 75px;
-                    right: 250px;
+                    right: 250px; */
                 }
 
                 #buttonI {
@@ -154,9 +159,9 @@
                     font-family: 'Josefin Sans', sans-serif;
                     background: #F090C0;                    
                     border: 1px solid black;                    
-                    position: absolute;
+                    /* position: absolute;
                     bottom: 100px;
-                    right: 100px;
+                    right: 100px; */
                 }
 
             .nav {
