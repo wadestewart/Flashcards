@@ -9,7 +9,7 @@ const gameCards = [
 
     {
         Question: 'Nick Hurley',
-        Answer: 'Owner of the steel mill where Alex works, he falls for her after seeing her dance exotically. *sidenote: he would later resign for the obvious sexual harrasment.',
+        Answer: 'Owner of the steel mill where Alex works, he falls for her after seeing her dance exotically. *sidenote: he would later resign for the obvious sexual harassment.',
         // imgFile: 'url(images.nick.jpg)'
     },
 
