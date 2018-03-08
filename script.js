@@ -32,6 +32,7 @@ const gameCards = [
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
 let card = $('#card')
 let begin = $('#begin')
+let flip = $('#flip')
 let next = $('#next')
 let correct = $('#buttonC')
 let incorrect = $('#buttonI')
@@ -47,15 +48,15 @@ begin.on('click', function() {
 // Function to populate card questions, change background, change 'Begin' button to 'Flip', and flip card when ready
 function cardQuestion (counter) {
     let populateQ = gameCards[counter].Question
-    console.log(populateQ)
+    // console.log(populateQ)
     let populateImg = gameCards[counter].imgUrl
-    console.log(populateImg)
+    // console.log(populateImg)
     cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', 'white')
     begin.text('Flip')
     begin.click(function () {
         card.toggleClass('flipped')
     })
-    begin.off()
+    // begin.off()
 }
 
 // Function to populate 1st card answer
@@ -65,7 +66,8 @@ begin.on('click', function() {
 
 function cardAnswer(counter) {
     let populateA = gameCards[counter].Answer
-    cardBack.text( populateA )
+    cardBack.text(populateA)
+    // console.log(populateA)
     begin.click(function () {
         card.toggleClass('flipped')
     })
@@ -78,10 +80,6 @@ next.on('click', function() {
         counter = 0
     }
     cardQuestion(counter)
-    // cardFront.text(populateQ)
-    // cardFront.text(populateQ)
-    // cardFront.text(populateQ)
-    // cardFront.text(populateQ)
 })
 
 // Tally correct cards
@@ -89,6 +87,7 @@ let tallyCorrect = parseInt($('.correct').text())
 
 correct.on('click', () => {
     tallyCorrect += 1
+    gameCards.splice(counter, 1)
 
     if ( tallyCorrect < 5 ) {
         $( '.correct' ).text( tallyCorrect )
