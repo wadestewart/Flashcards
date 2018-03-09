@@ -90,9 +90,9 @@ correct.on('click', () => {
     gameCards.splice(counter, 1)
 
     if ( tallyCorrect < 5 ) {
-        $( '.correct' ).text( tallyCorrect )
-    } else if ( tallyCorrect === 5 ) {
-        alert( 'You are a maniac!' )
+        $('.correct').text( tallyCorrect )
+    } else if (tallyCorrect === 5) {
+        alert('You are a maniac!')
     }
 })
 
@@ -101,9 +101,9 @@ let tallyIncorrect = parseInt($('.incorrect').text())
 
 incorrect.on('click', () => {
     tallyIncorrect += 1
-    gameCards.splice(0)
+    // gameCards.splice(0)
 
     if ( tallyIncorrect <= 5 ) {
-        $( '.incorrect' ).text( tallyIncorrect )
+        $('.incorrect').text(tallyIncorrect)
     }
 })
