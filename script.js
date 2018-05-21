@@ -50,6 +50,7 @@ begin.on('click', function() {
 // Function to populate card answers
 flip.on('click', function() {
     cardAnswer(counter)
+    card.toggleClass('flipped')
 })
 
 // Function to populate card questions, change background, change 'Begin' button to 'Flip', and flip card when ready
@@ -59,19 +60,15 @@ function cardQuestion (counter) {
     let populateImg = gameCards[counter].imgUrl
     // console.log(populateImg)
     cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', 'white')
-    flip.click(function () {
-        card.toggleClass('flipped')
-    })
+    // flip.click(function () {
+    //     card.toggleClass('flipped')
+    // })
 }
 
 function cardAnswer(counter) {
     let populateA = gameCards[counter].Answer
     cardBack.text(populateA)
     // console.log(populateA)
-    flip.click(function () {
-        card.toggleClass('flipped')
-    })
-
 }
 
 // Next card event listener and function
