@@ -29,7 +29,6 @@
                 font-family: 'Josefin Sans', sans-serif;
                 display: flex;
                 justify-content: center;
-                align-content: center;
                 flex-direction: column;
                 flex: 1 1 auto;
                 background: #18D8F0aa;
@@ -42,6 +41,16 @@
 
             .sup {
                 vertical-align: super;
+            }
+
+            #begin {
+                background: #F090C0;
+                border: 1px solid black;                        
+                font-size: 32px;
+                font-family: 'Josefin Sans', sans-serif;
+                height: 75px;
+                margin: auto;
+                width: 150px;
             }
 
                 /*This 3D flip from https://desandro.github.io/3dtransforms/docs/card-flip.html*/
@@ -87,7 +96,7 @@
                             background-image: url( 'images/flashdance.png' );
                             background-size: cover;
                             background-repeat: no-repeat;
-                            margin: 0;
+                            margin: auto;
                             text-align: right;
                             line-height: 550px;      
                         }
@@ -98,7 +107,7 @@
                             font-size: 24px;
                             font-family: 'Josefin Sans', sans-serif;
                             background: #F090C0;
-                            margin: 0;
+                            margin: auto;
                             text-align: center;
                             vertical-align: center;
                             line-height: 70px;
@@ -120,18 +129,8 @@
                         font-size: 20px;
                         font-family: 'Josefin Sans', sans-serif;
                         height: 50px;
-                        margin: 0 100px 0 0;
+                        margin: auto;
                         width: 100px;
-                    }
-
-                    #begin {
-                        background: #F090C0;
-                        border: 1px solid black;                        
-                        font-size: 32px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        height: 75px;
-                        margin: 0 50px 0 0;
-                        width: 150px;
                     }
 
                     #flip {
@@ -140,7 +139,7 @@
                         font-size: 32px;
                         font-family: 'Josefin Sans', sans-serif;
                         height: 75px;
-                        margin: 0 50px 0 0;
+                        margin: auto;
                         width: 150px;
                     }
 
@@ -150,7 +149,7 @@
                         font-size: 28px;
                         font-family: 'Josefin Sans', sans-serif;
                         height: 75px;
-                        margin: 0 0 0 50px;
+                        margin: auto;
                         width: 150px;
                     }
 
@@ -160,7 +159,7 @@
                         font-size: 20px;
                         font-family: 'Josefin Sans', sans-serif;
                         height: 50px;
-                        margin: 0 0 0 100px;
+                        margin: auto;
                         width: 100px;
                     }
 
@@ -168,7 +167,7 @@
                 width: 200px;
                 order: -1;
                 background: #F090C0;
-                border: 1px solid black;                
+                border-right: 1px solid black;                
             }
 
             .correct {
@@ -179,7 +178,7 @@
             .aside {
                 width: 200px;
                 background: #F090C0;
-                border: 1px solid black;                
+                border-left: 1px solid black;                
             }
 
             .incorrect {

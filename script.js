@@ -1,7 +1,7 @@
 
 // Array containing data for flash cards
 let counter = 0
-const gameCards = [
+let gameCards = [
     {
         Question: "Alexandra 'Alex' Owens",
         Answer: 'A steel town welder with a dream of becoming a professional dancer.',
@@ -41,42 +41,42 @@ let cardBack = $('.back')
 let populateQ
 let populateA
 
+// Function to populate card questions and images
 begin.on('click', function() {
     cardQuestion(counter)
+})
+
+// Function to populate card answers
+flip.on('click', function() {
+    cardAnswer(counter)
 })
 
 // Function to populate card questions, change background, change 'Begin' button to 'Flip', and flip card when ready
 function cardQuestion (counter) {
     let populateQ = gameCards[counter].Question
-    // console.log(populateQ)
+    // console.log(gameCards)
     let populateImg = gameCards[counter].imgUrl
     // console.log(populateImg)
     cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', 'white')
-    begin.text('Flip')
-    begin.click(function () {
+    flip.click(function () {
         card.toggleClass('flipped')
     })
-    // begin.off()
 }
-
-// Function to populate 1st card answer
-begin.on('click', function() {
-    cardAnswer(counter)
-})
 
 function cardAnswer(counter) {
     let populateA = gameCards[counter].Answer
     cardBack.text(populateA)
     // console.log(populateA)
-    begin.click(function () {
+    flip.click(function () {
         card.toggleClass('flipped')
     })
+
 }
 
 // Next card event listener and function
 next.on('click', function() {
-    counter++ 
-    if (counter === 5) {
+    counter += 1
+    if (counter >= gameCards.length) {
         counter = 0
     }
     cardQuestion(counter)
@@ -88,6 +88,8 @@ let tallyCorrect = parseInt($('.correct').text())
 correct.on('click', () => {
     tallyCorrect += 1
     gameCards.splice(counter, 1)
+    
+    console.log(gameCards)
 
     if ( tallyCorrect < 5 ) {
         $('.correct').text( tallyCorrect )
