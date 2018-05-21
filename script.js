@@ -44,6 +44,7 @@ let populateA
 // Function to populate card questions and images
 begin.on('click', function() {
     cardQuestion(counter)
+    $(this).hide()
 })
 
 // Function to populate card answers

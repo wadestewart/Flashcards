@@ -75,7 +75,7 @@
                         justify-content: center;
                         left: 135px;
                         transform-style: preserve-3d;
-                        transition: transform 1s;
+                        transition: transform 0.5s;
                     }
 
                     #card figure {
