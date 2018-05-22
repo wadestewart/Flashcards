@@ -23,7 +23,7 @@ let gameCards = [
         imgUrl: 'url(images/pcdr.png)'
     },
     {
-        Question: 'Maniac',
+        Question: '',
         Answer: "Title track from the movie. 'Best song ever written' -Mozart",
         imgUrl: 'url(images/maniac.png)'
     }
@@ -38,7 +38,7 @@ let correct = $('#buttonC')
 let incorrect = $('#buttonI')
 let cardFront = $('.front')
 let cardBack = $('.back')
-let buttonDiv = $('#buttons')
+// let buttonDiv = $('#buttons')
 let navDiv = $('#nav')
 let asideDiv = $('#aside')
 let populateQ
@@ -46,7 +46,8 @@ let populateA
 
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
-    buttonDiv.hide()
+    flip.hide()
+    next.hide()
     navDiv.hide()
     asideDiv.hide()
 })
@@ -55,7 +56,7 @@ $(function() {
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
-    buttonDiv.show()
+    flip.show()
     navDiv.show()
     asideDiv.show()
 })
@@ -87,27 +88,39 @@ function cardAnswer(counter) {
 // Next card event listener and function
 next.on('click', function() {
     counter += 1
+
     if (counter >= gameCards.length) {
         counter = 0
     }
+    
+    // if ()
+
     cardQuestion(counter)
+    $(this).hide()
+    flip.show()
 })
 
 // Tally correct cards
 let tallyCorrect = parseInt($('.correct').text())
 
 correct.on('click', () => {
+    console.log(correct)
     tallyCorrect += 1
     gameCards.splice(counter, 1)
     
-    console.log(gameCards)
+    // console.log(gameCards)
 
-    if ( tallyCorrect < 5 ) {
+    if (tallyCorrect < 5) {
         $('.correct').text( tallyCorrect )
     } else if (tallyCorrect === 5) {
         alert('You are a maniac!')
     }
+
+    flip.hide()
+    next.show()
 })
+
+console.log(correct)
 
 // Tally incorrect cards
 let tallyIncorrect = parseInt($('.incorrect').text())
@@ -119,4 +132,7 @@ incorrect.on('click', () => {
     if ( tallyIncorrect <= 5 ) {
         $('.incorrect').text(tallyIncorrect)
     }
+
+    flip.hide()
+    next.show()
 })
