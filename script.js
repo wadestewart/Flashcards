@@ -38,13 +38,26 @@ let correct = $('#buttonC')
 let incorrect = $('#buttonI')
 let cardFront = $('.front')
 let cardBack = $('.back')
+let buttonDiv = $('#buttons')
+let navDiv = $('#nav')
+let asideDiv = $('#aside')
 let populateQ
 let populateA
+
+// Function to hide flashcards until user clicks 'begin' button
+$(function() {
+    buttonDiv.hide()
+    navDiv.hide()
+    asideDiv.hide()
+})
 
 // Function to populate card questions and images
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
+    buttonDiv.show()
+    navDiv.show()
+    asideDiv.show()
 })
 
 // Function to populate card answers

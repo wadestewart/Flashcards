@@ -1,6 +1,6 @@
 .hg {
     display: flex;    
-    min-height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
     text-align: center;
 }
@@ -16,12 +16,12 @@
         background: #18D8F0cc;
         color: #ED145A;
         border: 1px solid black;
+        padding: 15px;
     }
 
         .hg-body {
             display: flex;
             justify-content: center;
-            align-content: center;
             flex: 1 0 auto;
         }
 
@@ -36,7 +36,7 @@
             }
 
             h2 {
-                padding: 0 0 20px 0;
+                padding: 20px 0;
             }
 
             .sup {
@@ -49,6 +49,7 @@
                 font-size: 32px;
                 font-family: 'Josefin Sans', sans-serif;
                 height: 75px;
+                padding: 0;
                 margin: auto;
                 width: 150px;
             }
@@ -60,7 +61,8 @@
                     position: relative;
                     perspective: 800px;
                     text-align: center;
-                    margin: 25px 0;
+                    padding: 0;
+                    margin: 50px 225px 100px;
                 }
                 
                     #card {
@@ -118,8 +120,8 @@
                             transform: rotateY( 180deg );                            
                         }
 
-                .buttons {
-                    margin: 35px 0 0 0;
+                #buttons {
+                    /* margin: 35px 0 0 0; */
 
                 }        
 
@@ -163,7 +165,7 @@
                         width: 100px;
                     }
 
-            .nav {
+            #nav {
                 width: 200px;
                 order: -1;
                 background: #F090C0;
@@ -176,7 +178,7 @@
                 font-size: 48px;
             }
 
-            .aside {
+            #aside {
                 width: 200px;
                 background: #F090C0;
                 border-right: 1px solid black;                
