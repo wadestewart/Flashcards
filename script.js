@@ -1,6 +1,8 @@
 
-// Array containing data for flash cards
+// Counter to be associated with index of card in array below
 let counter = 0
+
+// Array containing data for flash cards
 let gameCards = [
     {
         Question: "Alexandra 'Alex' Owens",
@@ -10,22 +12,22 @@ let gameCards = [
     {
         Question: 'Nick Hurley',
         Answer: 'Owner of the steel mill where Alex works, he falls for her after seeing her dance exotically. He would later resign after being swept up in the #MeToo and #TimesUp movement for his obvious sexual harassment.',
-        imgUrl: 'url(images/nick.jpg)'
+        imgUrl: 'url(images/nick2.jpg)'
     },
     {
         Question: "Mawby's",
         Answer: "'Gentleman' Club where Alex and her friends work. Many have aspirations beyond dancing exotically.",
-        imgUrl: 'url(images/mawbys.jpg)'
+        imgUrl: 'url(images/mawbys2.jpg)'
     },
     {
         Question: 'Pittsburgh Conservatory of Dance and Repertory',
         Answer: 'Where Alex eventually gets an audition and her dreams come true!',
-        imgUrl: 'url(images/pcdr.png)'
+        imgUrl: 'url(images/flashdance-ballet.jpg)'
     },
     {
-        Question: '',
+        Question: 'Maniac',
         Answer: "Title track from the movie. 'Best song ever written' -Mozart",
-        imgUrl: 'url(images/maniac.png)'
+        imgUrl: 'url(images/flashdance-water.jpg)'
     }
 ]
 
@@ -64,22 +66,16 @@ flip.on('click', function() {
     card.toggleClass('flipped')
 })
 
-// Function to populate card questions, change background, change 'Begin' button to 'Flip', and flip card when ready
+// Function to populate card questions, change background, and flip card when ready
 function cardQuestion (counter) {
     let populateQ = gameCards[counter].Question
-    // console.log(gameCards)
     let populateImg = gameCards[counter].imgUrl
-    // console.log(populateImg)
     cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', 'white')
-    // flip.click(function () {
-    //     card.toggleClass('flipped')
-    // })
 }
 
 function cardAnswer(counter) {
     let populateA = gameCards[counter].Answer
     cardBack.text(populateA)
-    // console.log(populateA)
 }
 
 // Next card event listener and function
@@ -90,8 +86,6 @@ next.on('click', function() {
         counter = 0
     }
     
-    // if ()
-
     cardQuestion(counter)
     $(this).hide()
     flip.show()
@@ -101,7 +95,6 @@ next.on('click', function() {
 let tallyCorrect = parseInt($('.correct').text())
 
 correct.on('click', () => {
-    console.log(correct)
     tallyCorrect += 1
     gameCards.splice(counter, 1)
     
@@ -117,14 +110,11 @@ correct.on('click', () => {
     next.show()
 })
 
-console.log(correct)
-
 // Tally incorrect cards
 let tallyIncorrect = parseInt($('.incorrect').text())
 
 incorrect.on('click', () => {
     tallyIncorrect += 1
-    // gameCards.splice(0)
 
     if ( tallyIncorrect <= 5 ) {
         $('.incorrect').text(tallyIncorrect)
