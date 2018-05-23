@@ -43,7 +43,7 @@
                 vertical-align: super;
             }
 
-            #begin {
+            .begin {
                 background: #F090C0;
                 border: 1px solid black;                        
                 font-size: 32px;
@@ -65,7 +65,7 @@
                     margin: 50px 225px 100px;
                 }
                 
-                    #card {
+                    .card {
                         height: 300px;
                         width: 700px;
                         border: 2px solid #ED145A;
@@ -79,7 +79,7 @@
                         transition: transform 0.5s;
                     }
 
-                    #card figure {
+                    .card figure {
                         margin: 0;
                         display: block;
                         position: absolute;
@@ -115,16 +115,16 @@
                             transform: rotateY( 180deg );                            
                         }
 
-                        #card.flipped {
+                        .card.flipped {
                             transform: rotateY( 180deg );                            
                         }
 
-                #buttons {
+                .buttons {
                     margin: 35px 0 0 0;
 
                 }        
 
-                    #buttonC {
+                    .buttonC {
                         background: #F090C0;                    
                         border: 1px solid black;
                         font-size: 20px;
@@ -134,7 +134,7 @@
                         width: 100px;
                     }
 
-                    #flip {
+                    .flip {
                         background: #F090C0;                    
                         border: 1px solid black;
                         font-size: 32px;
@@ -144,7 +144,7 @@
                         width: 150px;
                     }
 
-                    #next {
+                    .next {
                         background: #F090C0;                    
                         border: 1px solid black;
                         font-size: 32px;
@@ -154,7 +154,7 @@
                         width: 150px;
                     }
 
-                    #buttonI {
+                    .buttonI {
                         background: #F090C0;                    
                         border: 1px solid black;
                         font-size: 20px;
@@ -164,7 +164,7 @@
                         width: 100px;
                     }
 
-            #nav {
+            .nav {
                 width: 200px;
                 order: -1;
                 background: #F090C0;
@@ -177,7 +177,7 @@
                 font-size: 48px;
             }
 
-            #aside {
+            .aside {
                 width: 200px;
                 background: #F090C0;
                 border-right: 1px solid black;                

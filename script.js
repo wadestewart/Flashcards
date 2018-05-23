@@ -30,17 +30,14 @@ let gameCards = [
 ]
 
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
-let card = $('#card')
-let begin = $('#begin')
-let flip = $('#flip')
-let next = $('#next')
-let correct = $('#buttonC')
-let incorrect = $('#buttonI')
+let card = $('.card')
+let begin = $('.begin')
+let flip = $('.flip')
+let next = $('.next')
+let correct = $('.buttonC')
+let incorrect = $('.buttonI')
 let cardFront = $('.front')
 let cardBack = $('.back')
-// let buttonDiv = $('#buttons')
-let navDiv = $('#nav')
-let asideDiv = $('#aside')
 let populateQ
 let populateA
 
@@ -48,8 +45,8 @@ let populateA
 $(function() {
     flip.hide()
     next.hide()
-    navDiv.hide()
-    asideDiv.hide()
+    correct.hide()
+    incorrect.hide()
 })
 
 // Function to populate card questions and images
@@ -57,8 +54,8 @@ begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
     flip.show()
-    navDiv.show()
-    asideDiv.show()
+    correct.show()
+    incorrect.show()
 })
 
 // Function to populate card answers
