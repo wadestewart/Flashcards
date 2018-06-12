@@ -34,7 +34,9 @@ let gameCards = [
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
 let card = $('.card')
 let begin = $('.begin')
-let flip = $('.flip')
+let snackBar = $('#snack-bar')
+let nav = $('.nav')
+let aside = $('.aside')
 let next = $('.next')
 let correct = $('.buttonC')
 let incorrect = $('.buttonI')
@@ -43,10 +45,20 @@ let cardBack = $('.back')
 let populateQ
 let populateA
 
+// Function to prompt user to push 'begin' button
+function toggleSnackBar() {
+    snackBar.addClass = 'show'
+
+    setInterval(function() {
+        snackBar.toggleClass('show', '')
+    }, 3000)
+}
+
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
-    flip.hide()
     next.hide()
+    nav.hide()
+    aside.hide()
     correct.hide()
     incorrect.hide()
 })
@@ -55,13 +67,15 @@ $(function() {
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
-    flip.show()
+    snackBar.hide()
+    nav.show()
+    aside.show()
     correct.show()
     incorrect.show()
 })
 
 // Function to populate card answers
-flip.on('click', function() {
+card.on('mouseenter', function() {
     cardAnswer(counter)
     card.toggleClass('flipped')
 })
@@ -88,7 +102,6 @@ next.on('click', function() {
     
     cardQuestion(counter)
     $(this).hide()
-    flip.show()
 })
 
 // Tally correct cards
@@ -106,7 +119,6 @@ correct.on('click', () => {
         alert('You are a maniac!')
     }
 
-    flip.hide()
     next.show()
 })
 
@@ -120,6 +132,5 @@ incorrect.on('click', () => {
         $('.incorrect').text(tallyIncorrect)
     }
 
-    flip.hide()
     next.show()
 })

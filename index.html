@@ -9,20 +9,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <title>Wade's Flashdance Flashcards</title>
 </head>
-<body class="hg">
+<body class="hg" onload="toggleSnackBar()">
 
-    <header class="header">Flashdance Flashcards</header>
+    <header class="header">Wade's Flashdance Flashcards<span class="sup">&reg</span></header>
 
         <div class="hg-body">
 
             <div class="content">
-
-                <h2>
-                    Increase your Flashdance knowledge with the help of Wade's Flashdance Flashcards
-                    <span class="sup">&reg</span>
-                </h2>
-
-                <p class='instructions'>Each card will have a term on the front and a definition on the back. Use the 'flip' button to toggle between term and definition. You will need to mark if you were correct or incorrect before you can advance to the next card. Get all five correct to achieve maniac status!</p>
                 
                 <div class="container">
                     <div class="card">
@@ -32,9 +25,10 @@
                 </div>
 
                 <button class="begin">Begin</button>
+                <div id='snack-bar'>Press Begin button to start</div>
 
                 <div class="buttons">
-                    <button class="flip">Flip</button>
+                    <!-- <button class="flip">Flip</button> -->
                     <button class="next">Next</button>
                 </div>
 
@@ -53,8 +47,6 @@
             </div>
 
         </div>    
-
-    <footer class="footer"></footer>
 
     <script src="./script.js"></script>
 

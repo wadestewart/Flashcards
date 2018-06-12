@@ -1,211 +1,263 @@
 .hg {
     display: flex;    
-    min-height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
     text-align: center;
 }
 
-    .header {
-        /* width: 100%;
-        height: 100%; */
-        font-size: 56px;
-        font-family: 'Satisfy', cursive;
-        text-shadow: 2px 2px 2px rgb(97, 67, 67);
-        text-align: center;
-        flex: 0 0 auto;
-        background: #18D8F0cc;
-        color: #ED145A;
-        border: 1px solid black;
-        padding: 15px;
+.header {
+    /* width: 100%;
+    height: 100%; */
+    background: #18D8F0cc;
+    /* border: 1px solid black; */
+    color: #ED145A;
+    flex: 0 0 auto;
+    font-size: 56px;
+    font-family: 'Satisfy', cursive;
+    text-shadow: 2px 2px 2px rgb(97, 67, 67);
+    text-align: center;
+}
+
+.hg-body {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+.content {
+    align-items: center;
+    background: #18D8F0aa;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+
+.instructions {
+    margin: auto;
+    width: auto;
+}
+
+.sup {
+    vertical-align: super;
+}
+
+.begin {
+    background: #F090C0;
+    border: 1px solid black;                        
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 75px;
+    padding: 0;
+    margin: 25px 0;
+    width: 150px;
+}
+
+#snack-bar {
+    background-color: #F090C0;
+    border: 1px solid #000000;
+    bottom: 30px;
+    color: #000000;
+    font-size: 24px;
+    left: 47.75%;
+    margin-left: -125px;
+    min-width: 250px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    visibility: hidden;
+}
+
+#snack-bar.show {
+    visibility: visible;
+
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/*This 3D flip from https://desandro.github.io/3dtransforms/docs/card-flip.html*/
+/* https://davidwalsh.name/css-flip Updated from this site */
+.container {
+    margin: 25px 0;
+    padding: 0;
+    perspective: 900px;
+    position: relative;
+    text-align: center;
+}
+
+.container:hover .card, .container:hover .card, .container.flip {
+    transform: rotateY( 180deg )
+}
+
+.container, .card, .front, .back {
+    height: 400px;
+    width: 800px;
+}
+
+.card {
+    border: 2px solid #ED145A;
+    box-shadow: 10px 10px 10px rgb(97, 67, 67);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.card figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url( 'images/flashdance.png' );
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 550px;      
+    margin: auto;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+    text-align: right;
+    transform: rotateY( 0deg );
+    z-index: 2;
+}
+
+.back {
+    background-image: url( 'images/flashdance.png' );
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+    background: #F090C0;
+    margin: auto;
+    text-align: center;
+    vertical-align: center;
+    line-height: 70px;
+    transform: rotateY( 180deg );
+}
+
+.buttons {
+    margin: auto;
+}        
+
+.buttonC {
+    background: #F090C0;                    
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 50px;
+    margin: auto;
+    width: 100px;
+}
+
+.flip {
+    background: #F090C0;                    
+    border: 1px solid black;
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 75px;
+    margin: auto;
+    width: 150px;
+}
+
+.next {
+    background: #F090C0;                    
+    border: 1px solid black;
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 75px;
+    margin: auto;
+    width: 150px;
+}
+
+.buttonI {
+    background: #F090C0;                    
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 50px;
+    margin: auto;
+    width: 100px;
+}
+
+.nav {
+    width: 200px;
+    order: -1;
+    background: #F090C0;
+    /* border-right: 1px solid black;                
+    border-left: 1px solid black;                 */
+}
+
+.correct {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+}
+
+.aside {
+    width: 200px;
+    background: #F090C0;
+    /* border-right: 1px solid black;                
+    border-left: 1px solid black;                 */
+}
+
+.incorrect {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+@media(max-width: 480px) {
+
+    .hg-body {
+        flex-direction: column;
     }
 
-        .hg-body {
-            display: flex;
-            justify-content: center;
-            flex: 1 0 auto;
-        }
+    .container {
+        height: 150px;
+        width: 300px;
+        perspective: 350px;
+    }
 
-            .content {
-                font-family: 'Josefin Sans', sans-serif;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                flex: 1 1 auto;
-                background: #18D8F0aa;
-                text-align: center;
-            }
+    .card, .card figure {
+        position: relative;
+    }
 
-            .instructions {
-                margin: auto;
-                width: 800px;
-            }
-
-            .sup {
-                vertical-align: super;
-            }
-
-            .begin {
-                background: #F090C0;
-                border: 1px solid black;                        
-                font-size: 32px;
-                font-family: 'Josefin Sans', sans-serif;
-                height: 75px;
-                padding: 0;
-                margin: auto;
-                width: 150px;
-            }
-
-                /*This 3D flip from https://desandro.github.io/3dtransforms/docs/card-flip.html*/
-                .container {
-                    width: 700px;
-                    height: 300px;
-                    position: relative;
-                    perspective: 800px;
-                    text-align: center;
-                    padding: 0;
-                    margin: auto;
-                }
-                
-                    .card {
-                        height: 300px;
-                        width: 700px;
-                        border: 2px solid #ED145A;
-                        margin: auto;
-                        box-shadow: 10px 10px 10px rgb(97, 67, 67);
-                        position: absolute;
-                        display: flex;
-                        justify-content: center;
-                        /* left: 135px; */
-                        transform-style: preserve-3d;
-                        transition: transform 0.5s;
-                    }
-
-                    .card figure {
-                        margin: 0;
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        backface-visibility: hidden;
-                      }
-
-                        .front {
-                            height: 300px;
-                            width: 700px;
-                            font-size: 24px;
-                            font-family: 'Josefin Sans', sans-serif;
-                            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
-                            background-image: url( 'images/flashdance.png' );
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            margin: auto;
-                            text-align: right;
-                            line-height: 550px;      
-                        }
-
-                        .back {
-                            height: 300px;
-                            width: 700px;
-                            font-size: 24px;
-                            font-family: 'Josefin Sans', sans-serif;
-                            background: #F090C0;
-                            margin: auto;
-                            text-align: center;
-                            vertical-align: center;
-                            line-height: 70px;
-                            transform: rotateY( 180deg );                            
-                        }
-
-                        .card.flipped {
-                            transform: rotateY( 180deg );                            
-                        }
-
-                .buttons {
-                    margin: auto;
-                }        
-
-                    .buttonC {
-                        background: #F090C0;                    
-                        border: 1px solid black;
-                        font-size: 20px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        height: 50px;
-                        margin: auto;
-                        width: 100px;
-                    }
-
-                    .flip {
-                        background: #F090C0;                    
-                        border: 1px solid black;
-                        font-size: 32px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        height: 75px;
-                        margin: auto;
-                        width: 150px;
-                    }
-
-                    .next {
-                        background: #F090C0;                    
-                        border: 1px solid black;
-                        font-size: 32px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        height: 75px;
-                        margin: auto;
-                        width: 150px;
-                    }
-
-                    .buttonI {
-                        background: #F090C0;                    
-                        border: 1px solid black;
-                        font-size: 20px;
-                        font-family: 'Josefin Sans', sans-serif;
-                        height: 50px;
-                        margin: auto;
-                        width: 100px;
-                    }
-
-            .nav {
-                width: 200px;
-                order: -1;
-                background: #F090C0;
-                border-right: 1px solid black;                
-                border-left: 1px solid black;                
-            }
-
-            .correct {
-                font-family: 'Josefin Sans', sans-serif;
-                font-size: 48px;
-            }
-
-            .aside {
-                width: 200px;
-                background: #F090C0;
-                border-right: 1px solid black;                
-                border-left: 1px solid black;                
-            }
-
-            .incorrect {
-                font-family: 'Josefin Sans', sans-serif;
-                font-size: 48px;
-            }
-
-            h3 {
-                font-family: 'Josefin Sans', sans-serif;
-            }
-
-    .footer {
+    .nav, .aside {
         width: 100%;
-        height: 50px;
-        background: #18D8F0ff;
-        border: 1px solid black;        
-    }
-
-    @media(max-width: 700px) {
-        .hg-body {
-            flex-direction: column;
-        }
-        .nav, .aside {
-            width: 100%;
-        }    
-    }
+    }    
+}
 
