@@ -32,6 +32,7 @@ let gameCards = [
 ]
 
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
+let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')
 let snackBar = $('#snack-bar')
@@ -56,6 +57,7 @@ function toggleSnackBar() {
 
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
+    card.hide()
     next.hide()
     nav.hide()
     aside.hide()
@@ -67,11 +69,17 @@ $(function() {
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
-    snackBar.hide()
+    container.hide()
+    card.show()
+    snackBar.html('Choose correct or incorrect')
     nav.show()
     aside.show()
     correct.show()
     incorrect.show()
+
+    setInterval(function() {
+        begin.css
+    })
 })
 
 // Function to populate card answers
@@ -102,6 +110,7 @@ next.on('click', function() {
     
     cardQuestion(counter)
     $(this).hide()
+
 })
 
 // Tally correct cards
@@ -115,11 +124,13 @@ correct.on('click', () => {
 
     if (tallyCorrect < 5) {
         $('.correct').text( tallyCorrect )
-    } else if (tallyCorrect === 5) {
+    } else if (tallyCorrect >= 5) {
         alert('You are a maniac!')
+        location.reload()
     }
 
     next.show()
+    snackBar.html('Click the next button').css('left', '49%')
 })
 
 // Tally incorrect cards
@@ -133,4 +144,5 @@ incorrect.on('click', () => {
     }
 
     next.show()
+    snackBar.html('Click the next button').css('left', '49%')
 })

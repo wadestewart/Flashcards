@@ -52,7 +52,7 @@
     font-family: 'Josefin Sans', sans-serif;
     height: 75px;
     padding: 0;
-    margin: 25px 0;
+    margin: 50px 0 0 0;
     width: 150px;
 }
 
@@ -101,14 +101,19 @@
 /*This 3D flip from https://desandro.github.io/3dtransforms/docs/card-flip.html*/
 /* https://davidwalsh.name/css-flip Updated from this site */
 .container {
-    margin: 25px 0;
+    background-image: url( 'images/flashdance.png' );
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #ED145A;
+    box-shadow: 10px 10px 10px rgb(97, 67, 67);
+    margin: 0;
     padding: 0;
     perspective: 900px;
     position: relative;
     text-align: center;
 }
 
-.container:hover .card, .container:hover .card, .container.flip {
+.container:hover .card, .container.hover .card {
     transform: rotateY( 180deg )
 }
 
@@ -138,9 +143,9 @@
 }
 
 .front {
-    background-image: url( 'images/flashdance.png' );
+    /* background-image: url( 'images/flashdance.png' );
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     font-size: 24px;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 550px;      
@@ -152,9 +157,6 @@
 }
 
 .back {
-    background-image: url( 'images/flashdance.png' );
-    background-size: cover;
-    background-repeat: no-repeat;
     font-size: 24px;
     font-family: 'Josefin Sans', sans-serif;
     background: #F090C0;
@@ -163,11 +165,7 @@
     vertical-align: center;
     line-height: 70px;
     transform: rotateY( 180deg );
-}
-
-.buttons {
-    margin: auto;
-}        
+}   
 
 .buttonC {
     background: #F090C0;                    
@@ -177,16 +175,6 @@
     height: 50px;
     margin: auto;
     width: 100px;
-}
-
-.flip {
-    background: #F090C0;                    
-    border: 1px solid black;
-    font-size: 32px;
-    font-family: 'Josefin Sans', sans-serif;
-    height: 75px;
-    margin: auto;
-    width: 150px;
 }
 
 .next {
@@ -213,8 +201,6 @@
     width: 200px;
     order: -1;
     background: #F090C0;
-    /* border-right: 1px solid black;                
-    border-left: 1px solid black;                 */
 }
 
 .correct {
@@ -225,8 +211,6 @@
 .aside {
     width: 200px;
     background: #F090C0;
-    /* border-right: 1px solid black;                
-    border-left: 1px solid black;                 */
 }
 
 .incorrect {
