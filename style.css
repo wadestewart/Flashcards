@@ -143,9 +143,9 @@
 }
 
 .front {
-    /* background-image: url( 'images/flashdance.png' );
+    /* background-image: url( 'images/flashdance.png' ); */
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     font-size: 24px;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 550px;      

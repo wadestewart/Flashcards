@@ -69,7 +69,7 @@ $(function() {
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
-    container.hide()
+    container.css({ 'backgroundImage': 'none' }).css({ 'border': 'none' }).css({ 'box-shadow': 'none' })
     card.show()
     snackBar.html('Choose correct or incorrect')
     nav.show()
@@ -78,8 +78,9 @@ begin.on('click', function() {
     incorrect.show()
 
     setInterval(function() {
-        begin.css
-    })
+        let colors = ['#F090C0', '#18D8F0aa']
+        begin.css({ 'background-color': colors})
+    }, 500)
 })
 
 // Function to populate card answers
