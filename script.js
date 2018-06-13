@@ -6,26 +6,26 @@ let counter = 0
 let gameCards = [
     {
         Question: "Alexandra 'Alex' Owens",
-        Answer: 'A steel town welder with a dream of becoming a professional dancer.',
+        Answer: 'The epitome of the American dream, from Pittsburgh no less.',
         imgUrl: 'url(images/alex.jpg)'
     },
     {
         Question: 'Nick Hurley',
-        Answer: 'Owner of the steel mill where Alex works, he falls for her after seeing her dance exotically. He would later resign after being swept up in the #MeToo and #TimesUp movement for his obvious sexual harassment.',
+        Answer: 'The age-old tale of power and entitlement. #MeToo, anyone?',
         imgUrl: 'url(images/nick2.jpg)'
     },
     {
         Question: "",
-        Answer: "'Gentleman' Club where Alex and her friends work. Many have aspirations beyond dancing exotically.",
+        Answer: "Are we still calling them 'Gentleman's Clubs'?",
         imgUrl: 'url(images/mawbys2.jpg)'
     },
     {
         Question: 'Pittsburgh Conservatory of Dance and Repertory',
-        Answer: 'Where Alex eventually gets an audition and her dreams come true!',
+        Answer: 'A bastion of snobbery and delight. A portal to another dream.',
         imgUrl: 'url(images/flashdance-ballet.jpg)'
     },
     {
-        Question: 'Maniac',
+        Question: "(She's a) Maniac",
         Answer: "Title track from the movie. 'Best song ever written' -Mozart",
         imgUrl: 'url(images/flashdance-water.jpg)'
     }
@@ -93,7 +93,7 @@ card.on('mouseenter', function() {
 function cardQuestion (counter) {
     let populateQ = gameCards[counter].Question
     let populateImg = gameCards[counter].imgUrl
-    cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', 'white')
+    cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', '#F090C0')
 }
 
 function cardAnswer(counter) {
