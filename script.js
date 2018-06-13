@@ -124,11 +124,6 @@ correct.on('click', () => {
     tallyCorrect += 1
     gameCards.splice(counter, 1)
     
-    // function playVideo(ev) {
-    //    video.show()
-    //    ev.preventDefault() 
-    // }
-    
     // console.log(gameCards)
 
     if (tallyCorrect < 5) {
