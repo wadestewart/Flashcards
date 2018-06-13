@@ -15,7 +15,7 @@ let gameCards = [
         imgUrl: 'url(images/nick2.jpg)'
     },
     {
-        Question: "Mawby's",
+        Question: "",
         Answer: "'Gentleman' Club where Alex and her friends work. Many have aspirations beyond dancing exotically.",
         imgUrl: 'url(images/mawbys2.jpg)'
     },
@@ -47,18 +47,18 @@ let populateQ
 let populateA
 
 // Function to prompt user to push 'begin' button
-function toggleSnackBar() {
-    snackBar.addClass = 'show'
+// function toggleSnackBar() {
+//     snackBar.addClass = 'show'
 
-    setInterval(function() {
-        snackBar.toggleClass('show', '')
-    }, 3000)
-}
+//     setInterval(function() {
+//         snackBar.toggleClass('show', '')
+//     }, 3000)
+// }
 
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
     card.hide()
-    next.hide()
+    next.css('visibility', 'hidden')
     nav.hide()
     aside.hide()
     correct.hide()
@@ -110,8 +110,9 @@ next.on('click', function() {
     }
     
     cardQuestion(counter)
-    $(this).hide()
-
+    $(this).css('visibility', 'hidden')
+    correct.css('visibility', 'visible')
+    incorrect.css('visibility', 'visible')
 })
 
 // Tally correct cards
@@ -130,8 +131,10 @@ correct.on('click', () => {
         location.reload()
     }
 
-    next.show()
-    snackBar.html('Click the next button').css('left', '49%')
+    correct.css('visibility', 'hidden')
+    incorrect.css('visibility', 'hidden')
+    next.css('visibility', 'visible')
+    // snackBar.html('Click the next button').css('left', '49%')
 })
 
 // Tally incorrect cards
@@ -144,6 +147,8 @@ incorrect.on('click', () => {
         $('.incorrect').text(tallyIncorrect)
     }
 
-    next.show()
-    snackBar.html('Click the next button').css('left', '49%')
+    incorrect.css('visibility', 'hidden')
+    correct.css('visibility', 'hidden')
+    next.css('visibility', 'visible')
+    // snackBar.html('Click the next button').css('left', '49%')
 })
