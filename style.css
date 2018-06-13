@@ -83,7 +83,7 @@
 .begin {
     animation-duration: 3s;
     animation-direction: alternate;
-    animation-name: fadein;
+    animation-name: begin-fade;
     animation-iteration-count: infinite;
     background: #F090C0;
     border: 2.5px solid #ED145A;                        
@@ -94,17 +94,17 @@
     margin: 50px 0 0 0;
     -webkit-animation-duration: 3s;
     -webkit-animation-direction: alternate;
-    -webkit-animation-name: fadein;
+    -webkit-animation-name: begin-fade;
     -webkit-animation-iteration-count: infinite;
     width: 150px;
 }
 
-@keyframes fadein {
+@keyframes begin-fade {
     from { background-color: #F090C0; }
     to { background-color: #18D8F0cc; }
 }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes begin-fade {
     from { background-color: #F090C0; }
     to { background-color: #18D8F0cc; }
 }
@@ -212,34 +212,89 @@
 }   
 
 .buttonC {
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-name: correct-fade;
+    animation-iteration-count: infinite;
     background: #F090C0;                    
     border: 1px solid black;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
     margin: auto;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-name: correct-fade;
+    -webkit-animation-iteration-count: infinite;
     width: 100px;
 }
 
-.next {
+@keyframes correct-fade {
+    from { background-color: #F090C0; }
+    to { background-color: #18D8F0cc; }
+}
+
+@-webkit-keyframes correct-fade {
+    from { background-color: #F090C0; }
+    to { background-color: #18D8F0cc; }
+}
+
+.buttonI {
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-name: incorrect-fade;
+    animation-iteration-count: infinite;
     background: #F090C0;                    
     border: 1px solid black;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 50px;
+    margin: auto;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-name: incorrect-fade;
+    -webkit-animation-iteration-count: infinite;
+    width: 100px;
+}
+
+@keyframes incorrect-fade {
+    from { background-color: #F090C0; }
+    to { background-color: #18D8F0cc; }
+}
+
+@-webkit-keyframes incorrect-fade {
+    from { background-color: #F090C0; }
+    to { background-color: #18D8F0cc; }
+}
+
+.next {
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-name: next-fade;
+    animation-iteration-count: infinite;
+    background: #F090C0;                    
+    border: 2.5px solid #ED145A;                        
     font-size: 32px;
     font-family: 'Josefin Sans', sans-serif;
     height: 75px;
     margin: 0;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-name: next-fade;
+    -webkit-animation-iteration-count: infinite;
     width: 150px;
 }
 
-.buttonI {
-    background: #F090C0;                    
-    border: 1px solid black;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    height: 50px;
-    margin: auto;
-    width: 100px;
+@keyframes next-fade {
+    from { background-color: #F090C0; }
+    to { background-color: #18D8F0cc; }
 }
+
+@-webkit-keyframes next-fade {
+    from { background-color: #F090C0; }
+    to { background-color: #18D8F0cc; }
+}
+
 
 h3 {
     font-family: 'Josefin Sans', sans-serif;
