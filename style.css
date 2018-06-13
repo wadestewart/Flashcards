@@ -302,11 +302,23 @@ h3 {
 
 @media(max-width: 480px) {
 
-    .hg-body {
+    .header {
+        font-size: 28px;
+    }
+
+    .hg-body, .content, .flex-row {
         flex-direction: column;
     }
 
-    .container {
+    .aside, .nav {
+        font-size: 14px;
+        height: 150px;
+        margin: 25px auto;;
+        width: 300px;
+    }
+
+    .container, .card, .front, .back {
+        font-size: 14px;
         height: 150px;
         width: 300px;
         perspective: 350px;
