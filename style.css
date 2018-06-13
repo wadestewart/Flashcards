@@ -162,7 +162,7 @@
     transform: rotateY( 180deg )
 }
 
-.container, .card, .front, .back {
+.container, .card, .front, .back, .video {
     height: 400px;
     width: 800px;
 }
@@ -172,8 +172,10 @@
     box-shadow: 10px 10px 10px rgb(97, 67, 67);
     display: flex;
     justify-content: center;
+    line-height: 400px;
     margin: auto;
     position: relative;
+    text-align: center;
     transform-style: preserve-3d;
     transition: 0.5s;
 }
@@ -202,13 +204,13 @@
 
 .back {
     background: #F090C0;
-    font-size: 24px;
+    font-size: 48px;
     font-family: 'Josefin Sans', sans-serif;
-    line-height: 50px;
+    line-height: 175px;
     margin: auto;
     text-align: center;
     transform: rotateY( 180deg );
-}   
+}
 
 .buttonC {
     animation-duration: 3s;
@@ -324,9 +326,10 @@ h3 {
         perspective: 350px;
     }
 
-    .container, .card, .card figure {
+    .container, .card, .card figure, .video {
         font-size: 13px;
         height: 150px;
+        line-height: 75px;
         width: 300px;
     }
 

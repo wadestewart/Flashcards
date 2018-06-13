@@ -26,7 +26,7 @@ let gameCards = [
     },
     {
         Question: "(She's a) Maniac",
-        Answer: "Title track from the movie. 'Best song ever written' -Mozart",
+        Answer: "'Best song ever written' -Mozart",
         imgUrl: 'url(images/flashdance-water.jpg)'
     }
 ]
@@ -43,6 +43,7 @@ let correct = $('.buttonC')
 let incorrect = $('.buttonI')
 let cardFront = $('.front')
 let cardBack = $('.back')
+let video = $('.video')
 let populateQ
 let populateA
 
@@ -63,6 +64,7 @@ $(function() {
     aside.hide()
     correct.hide()
     incorrect.hide()
+    video.hide()
 })
 
 // Function to populate card questions and images
@@ -122,13 +124,19 @@ correct.on('click', () => {
     tallyCorrect += 1
     gameCards.splice(counter, 1)
     
+    // function playVideo(ev) {
+    //    video.show()
+    //    ev.preventDefault() 
+    // }
+    
     // console.log(gameCards)
 
     if (tallyCorrect < 5) {
         $('.correct').text( tallyCorrect )
     } else if (tallyCorrect >= 5) {
-        alert('You are a maniac!')
-        location.reload()
+        card.hide()
+        next.hide()
+        video.show()
     }
 
     correct.css('visibility', 'hidden')
