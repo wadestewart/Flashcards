@@ -20,6 +20,13 @@
     vertical-align: super;
 }
 
+.restart {
+    float: right;
+    height: 40px;
+    margin: 25px 30px 0 0;
+    width: auto;
+}
+
 .hg-body {
     display: flex;
     justify-content: center;
@@ -81,7 +88,7 @@
 } */
 
 .begin {
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-direction: alternate;
     animation-name: begin-fade;
     animation-iteration-count: infinite;
@@ -92,7 +99,7 @@
     height: 75px;
     padding: 0;
     margin: 50px 0 0 0;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: begin-fade;
     -webkit-animation-iteration-count: infinite;
@@ -213,7 +220,7 @@
 }
 
 .buttonC {
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-direction: alternate;
     animation-name: correct-fade;
     animation-iteration-count: infinite;
@@ -223,7 +230,7 @@
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
     margin: auto;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: correct-fade;
     -webkit-animation-iteration-count: infinite;
@@ -241,7 +248,7 @@
 }
 
 .buttonI {
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-direction: alternate;
     animation-name: incorrect-fade;
     animation-iteration-count: infinite;
@@ -251,7 +258,7 @@
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
     margin: auto;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: incorrect-fade;
     -webkit-animation-iteration-count: infinite;
@@ -269,7 +276,7 @@
 }
 
 .next {
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-direction: alternate;
     animation-name: next-fade;
     animation-iteration-count: infinite;
@@ -279,7 +286,7 @@
     font-family: 'Josefin Sans', sans-serif;
     height: 75px;
     margin: 0;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: next-fade;
     -webkit-animation-iteration-count: infinite;

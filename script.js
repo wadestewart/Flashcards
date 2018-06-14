@@ -32,6 +32,7 @@ let gameCards = [
 ]
 
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
+let restart = $('.restart')
 let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')
@@ -58,6 +59,7 @@ let populateA
 
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
+    restart.hide()
     card.hide()
     next.css('visibility', 'hidden')
     nav.hide()
@@ -66,6 +68,10 @@ $(function() {
     incorrect.hide()
     video.hide()
 })
+
+function reload () {
+    location.reload()
+}
 
 // Function to populate card questions and images
 begin.on('click', function() {
@@ -78,6 +84,7 @@ begin.on('click', function() {
     aside.show()
     correct.show()
     incorrect.show()
+    restart.show()
 
     setInterval(function() {
         let colors = ['#F090C0', '#18D8F0aa']
