@@ -307,6 +307,10 @@ h3 {
         font-size: 28px;
     }
 
+    .flex-row {
+        margin: 0;
+    }
+
     .hg-body, .content, .flex-row {
         flex-direction: column;
     }
@@ -334,7 +338,18 @@ h3 {
     }
 
     .nav, .aside {
+        height: 100px;
         width: 100%;
-    }    
+    }
+
+    .buttonC, .buttonI {
+        font-size: 12px;
+        height: 25px;
+        width: 75px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
 }
 
