@@ -305,6 +305,10 @@ h3 {
         perspective: 350px;
     }
 
+    .card {
+        transform-style: unset;
+    }
+
     .container, .card, .card figure, .video {
         font-size: 13px;
         height: 150px;
