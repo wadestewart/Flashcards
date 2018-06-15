@@ -85,7 +85,7 @@
 } */
 
 .begin {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-direction: alternate;
     animation-name: begin-fade;
     animation-iteration-count: infinite;
@@ -96,7 +96,7 @@
     height: 75px;
     padding: 0;
     margin: 50px 0 0 0;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: begin-fade;
     -webkit-animation-iteration-count: infinite;
@@ -217,7 +217,7 @@
 }
 
 .buttonC {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-direction: alternate;
     animation-name: correct-fade;
     animation-iteration-count: infinite;
@@ -227,7 +227,7 @@
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
     margin: auto;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: correct-fade;
     -webkit-animation-iteration-count: infinite;
@@ -245,7 +245,7 @@
 }
 
 .buttonI {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-direction: alternate;
     animation-name: incorrect-fade;
     animation-iteration-count: infinite;
@@ -255,7 +255,7 @@
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
     margin: auto;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: incorrect-fade;
     -webkit-animation-iteration-count: infinite;
@@ -271,35 +271,6 @@
     from { background-color: #F090C0; }
     to { background-color: #18D8F0cc; }
 }
-
-.next {
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-name: next-fade;
-    animation-iteration-count: infinite;
-    background: #F090C0;                    
-    border: 2.5px solid #ED145A;                        
-    font-size: 32px;
-    font-family: 'Josefin Sans', sans-serif;
-    height: 75px;
-    margin: 0;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-direction: alternate;
-    -webkit-animation-name: next-fade;
-    -webkit-animation-iteration-count: infinite;
-    width: 150px;
-}
-
-@keyframes next-fade {
-    from { background-color: #F090C0; }
-    to { background-color: #18D8F0cc; }
-}
-
-@-webkit-keyframes next-fade {
-    from { background-color: #F090C0; }
-    to { background-color: #18D8F0cc; }
-}
-
 
 h3 {
     font-family: 'Josefin Sans', sans-serif;

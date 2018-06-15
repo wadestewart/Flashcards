@@ -1,4 +1,3 @@
-
 // Counter to be associated with index of card in array below
 let counter = 0
 
@@ -32,14 +31,12 @@ let gameCards = [
 ]
 
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
-let restart = $('.restart')
 let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')
-let snackBar = $('#snack-bar')
+// let snackBar = $('#snack-bar')
 let nav = $('.nav')
 let aside = $('.aside')
-let next = $('.next')
 let correct = $('.buttonC')
 let incorrect = $('.buttonI')
 let cardFront = $('.front')
@@ -60,7 +57,6 @@ let populateA
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
     card.hide()
-    next.css('visibility', 'hidden')
     nav.hide()
     aside.hide()
     correct.hide()
@@ -68,6 +64,7 @@ $(function() {
     video.hide()
 })
 
+// Function to reload page if user desires
 function reload () {
     location.reload()
 }
@@ -78,16 +75,10 @@ begin.on('click', function() {
     $(this).hide()
     container.css({ 'backgroundImage': 'none' }).css({ 'border': 'none' }).css({ 'box-shadow': 'none' })
     card.show()
-    snackBar.html('Choose correct or incorrect')
     nav.show()
     aside.show()
     correct.show()
     incorrect.show()
-
-    setInterval(function() {
-        let colors = ['#F090C0', '#18D8F0aa']
-        begin.css({ 'background-color': colors})
-    }, 500)
 })
 
 // Function to populate card answers
@@ -108,20 +99,6 @@ function cardAnswer(counter) {
     cardBack.text(populateA)
 }
 
-// Next card event listener and function
-next.on('click', function() {
-    counter += 1
-
-    if (counter >= gameCards.length) {
-        counter = 0
-    }
-    
-    cardQuestion(counter)
-    $(this).css('visibility', 'hidden')
-    correct.css('visibility', 'visible')
-    incorrect.css('visibility', 'visible')
-})
-
 // Tally correct cards
 let tallyCorrect = parseInt($('.correct').text())
 
@@ -135,13 +112,17 @@ correct.on('click', () => {
         $('.correct').text( tallyCorrect )
     } else if (tallyCorrect >= 5) {
         card.hide()
-        next.hide()
         video.show()
     }
 
-    correct.css('visibility', 'hidden')
-    incorrect.css('visibility', 'hidden')
-    next.css('visibility', 'visible')
+    counter += 1
+
+    if (counter >= gameCards.length) {
+        counter = 0
+    }
+
+    cardQuestion(counter)
+
     // snackBar.html('Click the next button').css('left', '49%')
 })
 
@@ -151,12 +132,17 @@ let tallyIncorrect = parseInt($('.incorrect').text())
 incorrect.on('click', () => {
     tallyIncorrect += 1
 
-    if ( tallyIncorrect <= 5 ) {
+    if ( tallyIncorrect < 5 ) {
         $('.incorrect').text(tallyIncorrect)
     }
 
-    incorrect.css('visibility', 'hidden')
-    correct.css('visibility', 'hidden')
-    next.css('visibility', 'visible')
+    counter += 1
+
+    if (counter >= gameCards.length) {
+        counter = 0
+    }
+
+    cardQuestion(counter)
+
     // snackBar.html('Click the next button').css('left', '49%')
 })
