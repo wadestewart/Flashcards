@@ -102,15 +102,9 @@ begin.on('click', function() {
 })
 
 // Function to populate card answers
-card.on('mouseenter', function() {
-    console.log('enter')
+card.on('click', function() {
     cardAnswer(counter)
     card.toggleClass('flipped')
-})
-
-card.on('mouseleave', function() {
-    console.log('leave')
-    // card.toggleClass('front')
 })
 
 // Function to populate card questions, change background, and flip card when ready
