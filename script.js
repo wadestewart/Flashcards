@@ -81,11 +81,17 @@ begin.on('click', function() {
     incorrect.show()
 })
 
-// Function to populate card answers
-card.on('mouseenter', function() {
-    cardAnswer(counter)
-    card.toggleClass('flipped')
-})
+// Function to populate card answers and handle responsive design
+if(window.matchMedia("(min-width: 480px)").matches) {
+    card.on('click', function() {
+        cardAnswer(counter)
+    })
+} else {
+    card.on('mouseenter', function() {
+        cardAnswer(counter)
+        card.toggleClass('flipped')
+    })
+}
 
 // Function to populate card questions, change background, and flip card when ready
 function cardQuestion (counter) {
