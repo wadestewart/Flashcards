@@ -8,7 +8,6 @@
 
 .header {
     background: #18D8F0cc;
-    color: #ED145A;
     flex: 0 0 auto;
     font-size: 56px;
     font-family: 'Satisfy', cursive;
@@ -21,10 +20,8 @@
 }
 
 .restart {
-    float: right;
-    height: 40px;
-    margin: 25px 30px 0 0;
-    width: auto;
+    text-decoration: none;
+    color: #ED145A;
 }
 
 .hg-body {
