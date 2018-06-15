@@ -1,7 +1,8 @@
-.hg {
+body {
     display: flex;    
     flex-direction: column;
     min-height: 100vh;
+    min-width: 100vw;
     overflow: hidden;
     text-align: center;
 }
@@ -162,9 +163,9 @@
     text-align: center;
 }
 
-.container:hover .card, .container.hover .card {
+/* .container:hover .card, .container.hover .card {
     transform: rotateY( 180deg )
-}
+} */
 
 .container, .card, .front, .back, .video {
     height: 400px;
@@ -178,7 +179,7 @@
     justify-content: center;
     line-height: 400px;
     margin: auto;
-    position: relative;
+    position: absolute;
     text-align: center;
     transform-style: preserve-3d;
     transition: 0.5s;
@@ -202,8 +203,8 @@
     margin: auto;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
     text-align: center;
-    transform: rotateY( 0deg );
-    z-index: 2;
+    /* transform: rotateY( 0deg ); */
+    /* z-index: 2; */
 }
 
 .back {
@@ -214,6 +215,10 @@
     margin: auto;
     text-align: center;
     transform: rotateY( 180deg );
+}
+
+.card.flipped {
+    transform: rotateY( 180deg )
 }
 
 .buttonC {
@@ -307,6 +312,7 @@ h3 {
 
     .card {
         transform-style: unset;
+        transition: none;
     }
 
     .container, .card, .card figure, .video {

@@ -31,6 +31,7 @@ let gameCards = [
 ]
 
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
+let mq = window.matchMedia( "(min-width: 480px)" )
 let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')
@@ -54,6 +55,25 @@ let populateA
 //     }, 3000)
 // }
 
+// $(function() {
+//     function responsive() {
+//         if ( $(window).width() > 480) {
+//             body.removeClass('mobile').addClass('desktop')
+//         } else {
+//             body.removeClass('desktop').addClass('mobile')
+//         }
+//     }
+    
+//     $(window).resize(function() {
+//         responsive()
+//     })
+
+//     card.on('mouseenter', 'body.desktop', function(){
+//         console.log('mouseenter')
+//     })
+
+// })
+
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
     card.hide()
@@ -69,7 +89,7 @@ function reload () {
     location.reload()
 }
 
-// Function to populate card questions and images
+// Event to populate card questions and images
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
@@ -83,8 +103,14 @@ begin.on('click', function() {
 
 // Function to populate card answers
 card.on('mouseenter', function() {
+    console.log('enter')
     cardAnswer(counter)
     card.toggleClass('flipped')
+})
+
+card.on('mouseleave', function() {
+    console.log('leave')
+    // card.toggleClass('front')
 })
 
 // Function to populate card questions, change background, and flip card when ready
