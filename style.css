@@ -294,6 +294,11 @@ h3 {
         transform: translateY(-50%)
     }
 
+    #snack-bar {
+        font-size: 12px;
+        left: 50%;
+    }
+
     .hg-body, .content, .flex-row {
         flex-direction: column;
     }
