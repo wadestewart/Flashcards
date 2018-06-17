@@ -33,6 +33,7 @@ let gameCards = [
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
 let mq = window.matchMedia( "(min-width: 480px)" )
 let container = $('.container')
+let figure = $('.card figure')
 let card = $('.card')
 let begin = $('.begin')
 // let snackBar = $('#snack-bar')
@@ -54,25 +55,6 @@ let populateA
 //         snackBar.toggleClass('show', '')
 //     }, 3000)
 // }
-
-// $(function() {
-//     function responsive() {
-//         if ( $(window).width() > 480) {
-//             body.removeClass('mobile').addClass('desktop')
-//         } else {
-//             body.removeClass('desktop').addClass('mobile')
-//         }
-//     }
-    
-//     $(window).resize(function() {
-//         responsive()
-//     })
-
-//     card.on('mouseenter', 'body.desktop', function(){
-//         console.log('mouseenter')
-//     })
-
-// })
 
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
@@ -122,12 +104,11 @@ function cardAnswer(counter) {
 // Tally correct cards
 let tallyCorrect = parseInt($('.correct').text())
 
+// Event to handle user choosing correct: increase tally in correct html, increase counter to coincide with index, remove correct card from array, conditional to tally number of correct: (1) if 5, session is complete - show video and hide card, (2) if > 5, populate next card.
 correct.on('click', () => {
     tallyCorrect += 1
     gameCards.splice(counter, 1)
     
-    // console.log(gameCards)
-
     if (tallyCorrect < 5) {
         $('.correct').text( tallyCorrect )
     } else if (tallyCorrect >= 5) {
@@ -149,6 +130,7 @@ correct.on('click', () => {
 // Tally incorrect cards
 let tallyIncorrect = parseInt($('.incorrect').text())
 
+// Event to handle user choosing incorrect: increase tally in incorrect html, increase counter to coincide with index, reset counter if at the end of array, populate next card.
 incorrect.on('click', () => {
     tallyIncorrect += 1
 
