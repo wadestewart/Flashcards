@@ -190,6 +190,7 @@ body {
     display: block;
     height: 100%;
     position: absolute;
+    -webkit-backface-visibility: hidden;
     width: 100%;
 }
 

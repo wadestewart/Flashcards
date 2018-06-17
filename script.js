@@ -76,6 +76,7 @@ begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
     container.css({ 'backgroundImage': 'none' }).css({ 'border': 'none' }).css({ 'box-shadow': 'none' })
+    // figure.css({ 'backface-'})
     card.show()
     nav.show()
     aside.show()
