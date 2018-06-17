@@ -34,7 +34,7 @@ let gameCards = [
 let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')
-// let snackBar = $('#snack-bar')
+let snackBar = $('#snack-bar')
 let nav = $('.nav')
 let aside = $('.aside')
 let correct = $('.buttonC')
@@ -45,28 +45,29 @@ let video = $('.video')
 let populateQ
 let populateA
 
-// Function to prompt user to push 'begin' button
-// function toggleSnackBar() {
-//     snackBar.addClass = 'show'
-
-//     setInterval(function() {
-//         snackBar.toggleClass('show', '')
-//     }, 3000)
-// }
-
 // Function to hide flashcards until user clicks 'begin' button
 $(function() {
-    card.hide()
-    nav.hide()
     aside.hide()
+    card.hide()
     correct.hide()
     incorrect.hide()
+    nav.hide()
+    snackBar.hide()
     video.hide()
 })
 
 // Function to reload page if user desires
 function reload () {
     location.reload()
+}
+
+// Function to prompt user to click on card to reveal back (answer)
+function toggleSnackBar() {
+    snackBar.addClass = 'show'
+
+    setInterval(function() {
+        snackBar.toggleClass('show', '')
+    }, 3000)
 }
 
 // Event to populate card questions and images
@@ -80,12 +81,16 @@ begin.on('click', function() {
     aside.show()
     correct.show()
     incorrect.show()
+
+    toggleSnackBar()
 })
 
 // Function to populate card answers
 card.on('click', function() {
     cardAnswer(counter)
     card.toggleClass('flipped')
+
+    snackBar.hide()
 })
 
 // Function to populate card questions, change background, and flip card when ready

@@ -163,10 +163,6 @@ body {
     text-align: center;
 }
 
-/* .container:hover .card, .container.hover .card {
-    transform: rotateY( 180deg )
-} */
-
 .container, .card, .front, .back, .video {
     height: 400px;
     width: 800px;
@@ -317,11 +313,6 @@ h3 {
     .container {
         perspective: 350px;
     }
-
-    /* .card {
-        transform-style: unset;
-        transition: none;
-    } */
 
     .container, .card, .card figure, .video {
         font-size: 13px;
