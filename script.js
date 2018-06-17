@@ -56,33 +56,28 @@ $(function() {
     video.hide()
 })
 
-// Function to reload page if user desires
+// Function to reload page if user clicks header
 function reload () {
     location.reload()
 }
 
-// Function to prompt user to click on card to reveal back (answer)
-function toggleSnackBar() {
-    snackBar.addClass = 'show'
-
-    setInterval(function() {
-        snackBar.toggleClass('show', '')
-    }, 3000)
-}
-
-// Event to populate card questions and images
+// Event to populate card questions and images, snack-bar to prompt user to click image to reveal definition
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
     container.css({ 'backgroundImage': 'none' }).css({ 'border': 'none' }).css({ 'box-shadow': 'none' })
-    // figure.css({ 'backface-'})
     card.show()
     nav.show()
     aside.show()
     correct.show()
     incorrect.show()
+    snackBar.show()
 
-    toggleSnackBar()
+    snackBar.addClass = 'show'
+
+    setInterval(function() {
+        snackBar.toggleClass('show', '')
+    }, 3000)
 })
 
 // Function to populate card answers

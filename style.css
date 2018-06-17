@@ -42,8 +42,7 @@ body {
     text-align: center;
 }
 
-
-/* #snack-bar {
+#snack-bar {
     background-color: #F090C0;
     border: 1px solid #000000;
     bottom: 30px;
@@ -83,7 +82,7 @@ body {
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
-} */
+}
 
 .begin {
     animation-duration: 0.5s;
