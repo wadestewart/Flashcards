@@ -31,7 +31,6 @@ let gameCards = [
 ]
 
 // Game opening screen, click Begin to start study session! Begin button, flip button, card, front/back of card targeted
-let mq = window.matchMedia( "(min-width: 480px)" )
 let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')

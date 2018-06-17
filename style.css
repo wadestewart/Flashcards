@@ -96,7 +96,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     height: 75px;
     padding: 0;
-    margin: 50px 0 0 0;
+    margin: 0;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-direction: alternate;
     -webkit-animation-name: begin-fade;
@@ -288,6 +288,15 @@ h3 {
 
     .flex-row {
         margin: 0;
+        position: absolute;
+        top: 100px;
+    }
+
+    /* Explanation of positioning here: https://discourse.wicg.io/t/position-an-element-relatively-to-another-element-from-anywhere-in-the-dom/968 */
+    .begin {
+        margin: 0;
+        position: element('.container');
+        transform: translateY(-50%)
     }
 
     .hg-body, .content, .flex-row {
@@ -309,10 +318,10 @@ h3 {
         perspective: 350px;
     }
 
-    .card {
+    /* .card {
         transform-style: unset;
         transition: none;
-    }
+    } */
 
     .container, .card, .card figure, .video {
         font-size: 13px;
