@@ -353,6 +353,12 @@ h3 {
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
 
+        html, body {
+            height: 100px;
+            position: fixed;
+            width: 100%;
+        }
+
         .header {
             font-size: 28px;
         }
