@@ -110,7 +110,7 @@ correct.on('click', () => {
     
     if (tallyCorrect < 5) {
         $('.correct').text( tallyCorrect )
-    } else if (tallyCorrect >= 5) {
+    } else if (tallyCorrect == 5) {
         card.hide()
         video.show()
     }
