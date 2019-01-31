@@ -8,6 +8,7 @@ This project is designed to mimic flashcards that a student would use as a study
 As this project was built using HTML, CSS, and jQuery, no dependencies are required to enjoy this application.
 
 ## This project was built with...
+![alt text](./images/flash-ill.png)
 
 ...HTMl, CSS, and jQuery. 
 
