@@ -1,5 +1,5 @@
 # Flashdance Flashcards #
-![alt text](../images/flashdance.png)
+![alt text](./images/flashdance.png)
 
 This project is designed to mimic flashcards that a student would use as a study aid. I implemented the theme of the 1980s smash hit Flashdance as a placeholder for the obvious reasons that this subject matter is the story of all us. Really, it is the American Dream recorded for posterity. A user will push buttons onscreen to begin study session, flip cards to the back to display answers, change to next card, and tally whether they got the cards correct or incorrect.
 
