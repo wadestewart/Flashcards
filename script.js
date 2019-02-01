@@ -63,7 +63,11 @@ function reload () {
 begin.on('click', function() {
     cardQuestion(counter)
     $(this).hide()
-    container.css({ 'backgroundImage': 'none' }).css({ 'border': 'none' }).css({ 'box-shadow': 'none' })
+    container.css({
+        'backgroundImage': 'none',
+        'border': 'none',
+        'box-shadow': 'none'
+    })
     card.show()
     nav.show()
     aside.show()
@@ -116,6 +120,7 @@ correct.on('click', () => {
     }
 
     cardQuestion(counter)
+    card.toggleClass('flipped')
     correct.hide()
     incorrect.hide()
 })
@@ -138,6 +143,7 @@ incorrect.on('click', () => {
     }
 
     cardQuestion(counter)
+    card.toggleClass('flipped')
     correct.hide()
     incorrect.hide()
 })
