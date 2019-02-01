@@ -190,25 +190,27 @@ body {
     width: 100%;
 }
 
-.front {
-    background-size: cover;
-    background-repeat: no-repeat;
+#front {
+    align-items: center;
     backface-visibility: hidden;
+    background: #F090C0;
+    display: flex;
     font-size: 36px;
     font-family: 'Josefin Sans', sans-serif;
+    justify-content: center;
     line-height: 50px;      
     margin: auto;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
-    text-align: center;
 }
 
 .back {
-    background: #F090C0;
+    background-size: cover;
+    background-repeat: no-repeat;
     font-size: 48px;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 175px;
     margin: auto;
     text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
     transform: rotateY( 180deg );
 }
 

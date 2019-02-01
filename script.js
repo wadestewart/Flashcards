@@ -4,28 +4,28 @@ let counter = 0
 // Array containing data for flash cards
 let gameCards = [
     {
-        Question: "Alexandra 'Alex' Owens",
-        Answer: 'The epitome of the American dream, from Pittsburgh no less.',
+        Question: "The movie's main character. An 18 year-old welder from Pittsburgh with dreams of being a professional dancer.",
+        Answer: "Alexandra 'Alex' Owens",
         imgUrl: 'url(images/alex.jpg)'
     },
     {
-        Question: 'Nick Hurley',
-        Answer: 'The age-old tale of power and entitlement. #MeToo, anyone?',
+        Question: "The owner of the steel mill where Alex works by day. I'm not going to delve too far into this plot line due to the #metoo implications.",
+        Answer: 'Nick Hurley',
         imgUrl: 'url(images/nick2.jpg)'
     },
     {
-        Question: "",
-        Answer: "Are we still calling them 'Gentleman's Clubs'?",
+        Question: "Neighborhood bar & grille that hosts a cabaret where Alex and her friends perform.",
+        Answer: "",
         imgUrl: 'url(images/mawbys2.jpg)'
     },
     {
-        Question: 'Pittsburgh Conservatory of Dance and Repertory',
-        Answer: 'A bastion of snobbery and delight. A portal to another dream.',
+        Question: 'Alex gets a shot at her dream of formal dance training, but first must pass an audition at this prestigious institution.',
+        Answer: 'Pittsburgh Conservatory of Dance and Repertory',
         imgUrl: 'url(images/flashdance-ballet.jpg)'
     },
     {
-        Question: "(She's a) Maniac",
-        Answer: "'Best song ever written' -Mozart",
+        Question: "'Best song ever written' -Mozart",
+        Answer: "(She's a) Maniac",
         imgUrl: 'url(images/flashdance-water.jpg)'
     }
 ]
@@ -34,12 +34,11 @@ let gameCards = [
 let container = $('.container')
 let card = $('.card')
 let begin = $('.begin')
-let snackBar = $('#snack-bar')
 let nav = $('.nav')
 let aside = $('.aside')
 let correct = $('.buttonC')
 let incorrect = $('.buttonI')
-let cardFront = $('.front')
+let cardFront = $('#front')
 let cardBack = $('.back')
 let video = $('.video')
 let populateQ
@@ -52,7 +51,6 @@ $(function() {
     correct.hide()
     incorrect.hide()
     nav.hide()
-    snackBar.hide()
     video.hide()
 })
 
@@ -69,15 +67,6 @@ begin.on('click', function() {
     card.show()
     nav.show()
     aside.show()
-    correct.show()
-    incorrect.show()
-    snackBar.show()
-
-    snackBar.addClass = 'show'
-
-    setInterval(function() {
-        snackBar.toggleClass('show', '')
-    }, 3000)
 })
 
 // Function to populate card answers
@@ -85,20 +74,24 @@ card.on('click', function() {
     cardAnswer(counter)
     card.toggleClass('flipped')
 
-    snackBar.hide()
+    correct.show()
+    incorrect.show()
 })
 
 // Function to populate card questions, change background, and flip card when ready
 function cardQuestion (counter) {
     let populateQ = gameCards[counter].Question
-    let populateImg = gameCards[counter].imgUrl
-    cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', '#F090C0')
+    cardFront.text(populateQ)
 }
 
 // Function to populate card answer
 function cardAnswer(counter) {
     let populateA = gameCards[counter].Answer
-    cardBack.text(populateA)
+    let populateImg = gameCards[counter].imgUrl
+    cardBack.text(populateA).css({
+        'backgroundImage': populateImg,
+        'color': '#F090C0',
+    })
 }
 
 // Tally correct cards
@@ -123,8 +116,8 @@ correct.on('click', () => {
     }
 
     cardQuestion(counter)
-
-    // snackBar.html('Click the next button').css('left', '49%')
+    correct.hide()
+    incorrect.hide()
 })
 
 // Tally incorrect cards
@@ -145,6 +138,6 @@ incorrect.on('click', () => {
     }
 
     cardQuestion(counter)
-
-    // snackBar.html('Click the next button').css('left', '49%')
+    correct.hide()
+    incorrect.hide()
 })
