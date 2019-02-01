@@ -1,7 +1,7 @@
-# Flashdance Flashcards #
+# Flashdance Flashcards - My First Project! #
 ![alt text](./images/flashdance.png)
 
-This is my first project! This is my first foray into the wonderful world of JavaScript and jQuery. The user comes to the landing page and presses the begin button to be presented with the front of the first card, revealing the first definition and a button to flip when ready. Once the user has pressed the flip button, the back of the card with the keyword (term) and two buttons, one for an incorrect choice and one for a correct choice, are revealed. The user then chooses whether they were correct or incorrect pertaining to this card, the score is tallied, and the next card is presented. When the user has tallied five correct cards, they have reached maniac status!
+This is my first foray into the wonderful world of JavaScript and jQuery. The user comes to the landing page and presses the begin button to be presented with the front of the first card, revealing the first definition and a button to flip when ready. Once the user has pressed the flip button, the back of the card with the keyword and two buttons (incorrect and correct) are revealed. The user then chooses whether their knowledge of Flashdance was correct or incorrect, the score is tallied, and the next card is presented. When the user has tallied five correct cards, they have reached maniac status!
 
 ## This project was built with...
 ### ...HTML, CSS, and jQuery.
