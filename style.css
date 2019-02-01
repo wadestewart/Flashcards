@@ -213,7 +213,7 @@ body {
     animation-iteration-count: infinite;
     background: #F090C0;                    
     border: 1px solid black;
-    cursor: ;;
+    cursor: pointer;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
