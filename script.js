@@ -120,7 +120,7 @@ correct.on('click', () => {
     }
 
     cardQuestion(counter)
-    card.toggleClass('flipped')
+    card.hasClass('flipped') ? card.toggleClass('flipped') : card.toggleClass('')
     correct.hide()
     incorrect.hide()
 })
@@ -143,7 +143,7 @@ incorrect.on('click', () => {
     }
 
     cardQuestion(counter)
-    card.toggleClass('flipped')
+    card.hasClass('flipped') ? card.toggleClass('flipped') : card.toggleClass('')
     correct.hide()
     incorrect.hide()
 })
