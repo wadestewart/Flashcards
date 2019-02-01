@@ -95,6 +95,7 @@ function cardQuestion (counter) {
     cardFront.text(populateQ).css({ 'backgroundImage': populateImg }).css('color', '#F090C0')
 }
 
+// Function to populate card answer
 function cardAnswer(counter) {
     let populateA = gameCards[counter].Answer
     cardBack.text(populateA)
