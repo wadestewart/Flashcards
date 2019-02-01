@@ -43,55 +43,14 @@ body {
     text-align: center;
 }
 
-#snack-bar {
-    background-color: #F090C0;
-    border: 1px solid #000000;
-    bottom: 30px;
-    color: #000000;
-    font-size: 24px;
-    left: 47.75%;
-    margin-left: -125px;
-    min-width: 250px;
-    padding: 10px;
-    position: fixed;
-    text-align: center;
-    visibility: hidden;
-}
-
-#snack-bar.show {
-    visibility: visible;
-    
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1}
-}
-
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0}
-}
-
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-
 .begin {
     animation-duration: 0.5s;
     animation-direction: alternate;
     animation-name: begin-fade;
     animation-iteration-count: infinite;
     background: #F090C0;
-    border: 2.5px solid #ED145A;                        
+    border: 2.5px solid #ED145A;
+    cursor: pointer;
     font-size: 32px;
     font-family: 'Josefin Sans', sans-serif;
     height: 75px;
@@ -171,6 +130,7 @@ body {
 .card {
     border: 2px solid #ED145A;
     box-shadow: 10px 10px 10px rgb(97, 67, 67);
+    cursor: pointer;
     display: flex;
     justify-content: center;
     line-height: 400px;
@@ -224,6 +184,7 @@ body {
     animation-iteration-count: infinite;
     background: #F090C0;                    
     border: 1px solid black;
+    cursor: pointer;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
@@ -252,6 +213,7 @@ body {
     animation-iteration-count: infinite;
     background: #F090C0;                    
     border: 1px solid black;
+    cursor: ;;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     height: 50px;
@@ -304,11 +266,6 @@ h3 {
         margin: 0;
         position: element('.container');
         transform: translateY(-100%)
-    }
-
-    #snack-bar {
-        font-size: 12px;
-        left: 50%;
     }
 
     .hg-body, .content, .flex-row {
